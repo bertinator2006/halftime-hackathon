@@ -31,7 +31,11 @@ class AttendanceForm(BaseModel):
     title: str = "Default Attendance Form Title"
     fields: List[FormField]
     responses: List
-    
+
+class Group(BaseModel):
+    name: str
+    members: List[str] = Field(default_factory=list)
+        
 
 student_data : List[Student] = []
 # attendance_form_data : List[AttendanceForm] = []
